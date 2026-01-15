@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>어느 하루의 무게</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <div id="page-home" class="screen-content fade-in">
+            <div class="main-title">어느 하루의 무게</div>
+            <div class="sub-title">The Weight of a Day</div>
+            <div class="main-message">
+                "당신의 선택에 책임질<br>준비가 되셨습니까?"
+            </div>
+            <button class="btn-primary" onclick="startGame()">시작하기</button>
+        </div>
+
+        <div id="page-game" class="screen-content hidden">
+            <div class="top-bar">
+                <span id="stage-indicator">Stage 1 / 4</span>
+                <span id="time-indicator">00:00 AM</span>
+            </div>
+
+            <div class="scenario-box">
+                <p id="scenario-text" class="scenario-text">로딩 중...</p>
+            </div>
+
+            <div id="choices-area" style="width: 100%;"></div>
+        </div>
+
+        <div id="page-result" class="screen-content hidden">
+            <p style="color: var(--text-sub); margin-bottom: 5px;">당신의 엔딩은</p>
+            <h2 id="ending-title" class="ending-title">엔딩 제목</h2>
+            <div style="width: 50px; height: 1px; background: #555; margin: 10px auto;"></div>
+            <p id="ending-desc" style="line-height: 1.6; margin-bottom: 30px; color: #ddd;">설명</p>
+
+            <div class="stat-container">
+                <h4 style="margin: 0 0 15px 0;">📊 오늘의 정산서</h4>
+                
+                <div class="stat-row">
+                    <div class="stat-label"><span>자금 (Money)</span> <span id="val-money">0</span></div>
+                    <div class="progress-track"><div id="bar-money" class="progress-fill" style="background-color: #FFD700;"></div></div>
+                </div>
+
+                <div class="stat-row">
+                    <div class="stat-label"><span>업보 (Karma)</span> <span id="val-karma">0</span></div>
+                    <div class="progress-track"><div id="bar-karma" class="progress-fill" style="background-color: #4CAF50;"></div></div>
+                </div>
+
+                <div class="stat-row">
+                    <div class="stat-label"><span>스트레스 (Stress)</span> <span id="val-stress">0</span></div>
+                    <div class="progress-track"><div id="bar-stress" class="progress-fill" style="background-color: #F44336;"></div></div>
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="goHome()" style="margin-top: 30px;">처음부터 다시 하기</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
