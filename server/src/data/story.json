@@ -1,0 +1,32 @@
+{
+  "start": "scene1",
+  "scenes": {
+    "scene1": {
+      "id": "scene1",
+      "text": "눈을 떠보니 낯선 방이다. 문이 두 개 보인다.",
+      "choices": [
+        { "text": "왼쪽 문으로 간다", "next": "scene2" },
+        { "text": "오른쪽 문으로 간다", "next": "scene3" }
+      ]
+    },
+    "scene2": {
+      "id": "scene2",
+      "text": "왼쪽 문 너머에는 긴 복도가 이어진다. 발소리가 들린다.",
+      "choices": [
+        { "text": "숨는다", "next": "scene4" },
+        { "text": "그냥 걷는다", "next": "scene5" }
+      ]
+    },
+    "scene3": {
+      "id": "scene3",
+      "text": "오른쪽 문 너머엔 창문이 있다. 밖이 어둡다.",
+      "choices": [
+        { "text": "창문을 연다", "next": "scene6" },
+        { "text": "뒤로 돌아선다", "next": "scene2" }
+      ]
+    },
+    "scene4": { "id": "scene4", "text": "숨었더니 발소리가 멀어진다. 잠시 안전해졌다.", "choices": [] },
+    "scene5": { "id": "scene5", "text": "걷다가 누군가와 마주쳤다. 게임 오버.", "choices": [] },
+    "scene6": { "id": "scene6", "text": "창문을 열자 차가운 바람이 분다. 탈출 성공!", "choices": [] }
+  }
+}
